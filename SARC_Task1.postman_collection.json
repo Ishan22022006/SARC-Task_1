@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "acde2bbb-2bd0-4566-b932-15d923089614",
+		"name": "SARC_Task1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40586749"
+	},
+	"item": [
+		{
+			"name": "Create_User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"Person name\",\r\n    \"amount\" : 500.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/budget/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"budget",
+						""
+					]
+				},
+				"description": "C: Create - This request creats a new user in data-base"
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Details_of_User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/budget/Person name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"budget",
+						"Person name"
+					]
+				},
+				"description": "R: Read - This request allows to fetch data of particular user"
+			},
+			"response": []
+		},
+		{
+			"name": "Update_User_Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"Person Name\", \r\n    \"amount\" : 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/budget/ishan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"budget",
+						"ishan"
+					]
+				},
+				"description": "U: Update - This request allows us to update the amount of particular user"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_User_Details",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/budget/ishan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"budget",
+						"ishan"
+					]
+				},
+				"description": "D: Delete - This request allows us to dalete details of particular user"
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_Debit_Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"ishan\",\r\n    \"description\" : \"mobile\",\r\n    \"amount\" : 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/transactions/debit/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						"debit",
+						""
+					]
+				},
+				"description": "This request allows us to debit money from our account"
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_Credit_Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"ishan\",\r\n    \"amount\" : 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/transactions/credit/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						"credit",
+						""
+					]
+				},
+				"description": "This request allows us to credit money in our account"
+			},
+			"response": []
+		}
+	]
+}
